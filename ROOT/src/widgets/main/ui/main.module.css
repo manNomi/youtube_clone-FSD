@@ -1,0 +1,6 @@
+.root {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: var(--aside-size);
+  margin-top: var(--header-size);
+}
