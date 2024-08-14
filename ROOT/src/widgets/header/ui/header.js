@@ -1,6 +1,7 @@
 import css from "./header.module.css";
 import { makeLogo } from "../../logo/index.js";
 import { makeHeaderIcon } from "../../header_icon/index.js";
+import { makeSearchBox } from "../../search_box/index.js";
 
 const iconData = {
   setting: {
@@ -23,6 +24,7 @@ export const makeHeader = () => {
   const header = document.createElement("header");
   header.className = css.root;
   header.appendChild(makeLogo({ ...iconData }));
+  header.appendChild(makeSearchBox());
   header.appendChild(makeHeaderIcon(iconData.mic.resource));
   header.appendChild(makeHeaderIcon(iconData.camera.resource));
   header.appendChild(makeHeaderIcon(iconData.alert.resource));

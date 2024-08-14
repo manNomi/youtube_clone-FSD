@@ -4,4 +4,5 @@
   position: fixed;
   height: var(--header-size);
   display: flex;
+  background-color: var(--back-color);
 }
