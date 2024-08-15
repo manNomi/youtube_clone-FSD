@@ -1,5 +1,6 @@
 .root {
   position: absolute;
+  width: 80%;
   height: 80%;
   line-height: 100%;
   outline: none;

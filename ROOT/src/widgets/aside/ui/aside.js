@@ -1,4 +1,5 @@
 import { makeIcon } from "../../aside_icon/index.js";
+import { asideResizeEvent } from "../../../features/resize/index.js";
 import css from "./aside.module.css";
 
 const iconData = {
@@ -28,9 +29,12 @@ const iconData = {
 
 export const makeAside = () => {
   const aside = document.createElement("aside");
-  aside.classList = css.root;
   Object.values(iconData).forEach((icon) => {
     aside.appendChild(makeIcon({ ...icon }));
   });
+  asideResizeEvent(aside);
+  window.addEventListener("resize", () => asideResizeEvent(aside));
+  aside.classList = css.root;
+
   return aside;
 };

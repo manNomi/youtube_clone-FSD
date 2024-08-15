@@ -1,6 +1,13 @@
 .root {
   display: flex;
+  width: 100%;
+  height: 100%;
   flex-wrap: wrap;
-  margin-left: var(--aside-size);
   margin-top: var(--header-size);
+  justify-content: center;
+  align-items: center;
+  margin-left: var(--aside-size);
+}
+.none {
+  margin-left: 0;
 }
