@@ -280,6 +280,26 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+/***/ "./src/features/focus/focusEvent/focus_event.js":
+/*!******************************************************!*\
+  !*** ./src/features/focus/focusEvent/focus_event.js ***!
+  \******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"inputBlur\": () => (/* binding */ inputBlur),\n/* harmony export */   \"inputFocus\": () => (/* binding */ inputFocus)\n/* harmony export */ });\nconst inputFocus = (event, css) => {\n  event.target.parentElement.classList.add(css.root_focusOn);\n  event.target.parentElement.parentElement.classList.add(css.outline_focusOn);\n  event.target.parentElement.parentElement.parentElement\n    .querySelector(\"img\")\n    .classList.add(css.img_focusOn);\n};\nconst inputBlur = (event, css) => {\n  event.target.parentElement.classList.remove(css.root_focusOn);\n  event.target.parentElement.parentElement.classList.remove(\n    css.outline_focusOn\n  );\n  event.target.parentElement.parentElement.parentElement\n    .querySelector(\"img\")\n    .classList.remove(css.img_focusOn);\n};\n\n\n//# sourceURL=webpack:///./src/features/focus/focusEvent/focus_event.js?");
+
+/***/ }),
+
+/***/ "./src/features/focus/index.js":
+/*!*************************************!*\
+  !*** ./src/features/focus/index.js ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"inputBlur\": () => (/* reexport safe */ _focusEvent_focus_event_js__WEBPACK_IMPORTED_MODULE_0__.inputBlur),\n/* harmony export */   \"inputFocus\": () => (/* reexport safe */ _focusEvent_focus_event_js__WEBPACK_IMPORTED_MODULE_0__.inputFocus)\n/* harmony export */ });\n/* harmony import */ var _focusEvent_focus_event_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./focusEvent/focus_event.js */ \"./src/features/focus/focusEvent/focus_event.js\");\n\n\n\n//# sourceURL=webpack:///./src/features/focus/index.js?");
+
+/***/ }),
+
 /***/ "./src/features/resize/index.js":
 /*!**************************************!*\
   !*** ./src/features/resize/index.js ***!
@@ -540,23 +560,13 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
-/***/ "./src/widgets/search_box/ui/focus_event.js":
-/*!**************************************************!*\
-  !*** ./src/widgets/search_box/ui/focus_event.js ***!
-  \**************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"inputBlur\": () => (/* binding */ inputBlur),\n/* harmony export */   \"inputFocus\": () => (/* binding */ inputFocus)\n/* harmony export */ });\n/* harmony import */ var _search_box_module_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./search_box.module.css */ \"./src/widgets/search_box/ui/search_box.module.css\");\n\n\nconst inputFocus = (event) => {\n  event.target.parentElement.classList.add(_search_box_module_css__WEBPACK_IMPORTED_MODULE_0__[\"default\"].root_focusOn);\n  event.target.parentElement.parentElement.classList.add(_search_box_module_css__WEBPACK_IMPORTED_MODULE_0__[\"default\"].outline_focusOn);\n  event.target.parentElement.parentElement.parentElement\n    .querySelector(\"img\")\n    .classList.add(_search_box_module_css__WEBPACK_IMPORTED_MODULE_0__[\"default\"].img_focusOn);\n};\nconst inputBlur = (event) => {\n  event.target.parentElement.classList.remove(_search_box_module_css__WEBPACK_IMPORTED_MODULE_0__[\"default\"].root_focusOn);\n  event.target.parentElement.parentElement.classList.remove(\n    _search_box_module_css__WEBPACK_IMPORTED_MODULE_0__[\"default\"].outline_focusOn\n  );\n  event.target.parentElement.parentElement.parentElement\n    .querySelector(\"img\")\n    .classList.remove(_search_box_module_css__WEBPACK_IMPORTED_MODULE_0__[\"default\"].img_focusOn);\n};\n\n\n//# sourceURL=webpack:///./src/widgets/search_box/ui/focus_event.js?");
-
-/***/ }),
-
 /***/ "./src/widgets/search_box/ui/search_box.js":
 /*!*************************************************!*\
   !*** ./src/widgets/search_box/ui/search_box.js ***!
   \*************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"makeSearchBox\": () => (/* binding */ makeSearchBox)\n/* harmony export */ });\n/* harmony import */ var _shared_input_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../shared/input/index.js */ \"./src/shared/input/index.js\");\n/* harmony import */ var _search_box_module_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./search_box.module.css */ \"./src/widgets/search_box/ui/search_box.module.css\");\n/* harmony import */ var _focus_event_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./focus_event.js */ \"./src/widgets/search_box/ui/focus_event.js\");\n\n\n\n\n\nconst makeSearchBox = (srcURL) => {\n  const searchOutline = document.createElement(\"div\");\n  searchOutline.className = _search_box_module_css__WEBPACK_IMPORTED_MODULE_1__[\"default\"].outline;\n  const searchBox = document.createElement(\"div\");\n  searchBox.className = _search_box_module_css__WEBPACK_IMPORTED_MODULE_1__[\"default\"].root;\n\n  const searchLogo = document.createElement(\"img\");\n  searchLogo.className = _search_box_module_css__WEBPACK_IMPORTED_MODULE_1__[\"default\"].img;\n  searchLogo.src = srcURL;\n\n  const searchInput = (0,_shared_input_index_js__WEBPACK_IMPORTED_MODULE_0__.makeSearchInput)();\n  searchInput.addEventListener(\"focus\", _focus_event_js__WEBPACK_IMPORTED_MODULE_2__.inputFocus);\n  searchInput.addEventListener(\"blur\", _focus_event_js__WEBPACK_IMPORTED_MODULE_2__.inputBlur);\n\n  searchBox.appendChild(searchInput);\n  searchOutline.appendChild(searchBox);\n  searchOutline.appendChild(searchLogo);\n\n  return searchOutline;\n};\n\n\n//# sourceURL=webpack:///./src/widgets/search_box/ui/search_box.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"makeSearchBox\": () => (/* binding */ makeSearchBox)\n/* harmony export */ });\n/* harmony import */ var _shared_input_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../shared/input/index.js */ \"./src/shared/input/index.js\");\n/* harmony import */ var _search_box_module_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./search_box.module.css */ \"./src/widgets/search_box/ui/search_box.module.css\");\n/* harmony import */ var _features_focus_index_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../features/focus/index.js */ \"./src/features/focus/index.js\");\n\n\n\n\n\nconst makeSearchBox = (srcURL) => {\n  const searchOutline = document.createElement(\"div\");\n  searchOutline.className = _search_box_module_css__WEBPACK_IMPORTED_MODULE_1__[\"default\"].outline;\n  const searchBox = document.createElement(\"div\");\n  searchBox.className = _search_box_module_css__WEBPACK_IMPORTED_MODULE_1__[\"default\"].root;\n\n  const searchLogo = document.createElement(\"img\");\n  searchLogo.className = _search_box_module_css__WEBPACK_IMPORTED_MODULE_1__[\"default\"].img;\n  searchLogo.src = srcURL;\n\n  const searchInput = (0,_shared_input_index_js__WEBPACK_IMPORTED_MODULE_0__.makeSearchInput)();\n  searchInput.addEventListener(\"focus\", () => (0,_features_focus_index_js__WEBPACK_IMPORTED_MODULE_2__.inputFocus)(event, _search_box_module_css__WEBPACK_IMPORTED_MODULE_1__[\"default\"]));\n  searchInput.addEventListener(\"blur\", () => (0,_features_focus_index_js__WEBPACK_IMPORTED_MODULE_2__.inputBlur)(event, _search_box_module_css__WEBPACK_IMPORTED_MODULE_1__[\"default\"]));\n\n  searchBox.appendChild(searchInput);\n  searchOutline.appendChild(searchBox);\n  searchOutline.appendChild(searchLogo);\n\n  return searchOutline;\n};\n\n\n//# sourceURL=webpack:///./src/widgets/search_box/ui/search_box.js?");
 
 /***/ }),
 

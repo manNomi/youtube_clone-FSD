@@ -1,7 +1,7 @@
 import { makeSearchInput } from "../../../shared/input/index.js";
 import css from "./search_box.module.css";
 
-import { inputFocus, inputBlur } from "./focus_event.js";
+import { inputFocus, inputBlur } from "../../../features/focus/index.js";
 
 export const makeSearchBox = (srcURL) => {
   const searchOutline = document.createElement("div");
@@ -14,8 +14,8 @@ export const makeSearchBox = (srcURL) => {
   searchLogo.src = srcURL;
 
   const searchInput = makeSearchInput();
-  searchInput.addEventListener("focus", inputFocus);
-  searchInput.addEventListener("blur", inputBlur);
+  searchInput.addEventListener("focus", () => inputFocus(event, css));
+  searchInput.addEventListener("blur", () => inputBlur(event, css));
 
   searchBox.appendChild(searchInput);
   searchOutline.appendChild(searchBox);
