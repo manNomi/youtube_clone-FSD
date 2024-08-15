@@ -1,7 +1,7 @@
-import css from "./search.module.css";
+import css from "./search_container.module.css";
 import { makeSearchBox } from "../../search_box/index.js";
 import { makeSearchBtn } from "../../search_btn/index.js";
-import { makeHeaderIcon } from "../../header_icon/index.js";
+import { makeHeaderIcon } from "../../../shared/header_icon/index.js";
 
 export const makeSearchContainer = (imgOBJ) => {
   const { search, mic } = imgOBJ;

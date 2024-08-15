@@ -2,10 +2,13 @@
   position: absolute;
   height: 80%;
   line-height: 100%;
-  color: var(--color-placeHorder);
   outline: none;
   border: none;
   left: 10px;
   top: 50%;
   transform: translate(0, -50%);
+  color: var(--color-black);
+  &::placeholder {
+    color: var(--color-placeHorder);
+  }
 }

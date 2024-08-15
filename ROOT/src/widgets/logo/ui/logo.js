@@ -1,5 +1,5 @@
 import { makeIconImg } from "../../../shared/icon_img/index.js";
-import { makeHeaderIcon } from "../../header_icon/index.js";
+import { makeHeaderIcon } from "../../../shared/header_icon/index.js";
 
 import css from "./logo.module.css";
 export const makeLogo = (iconData) => {

@@ -10,6 +10,7 @@
   height: 64px;
   border-radius: 3px;
   margin: 1px;
+  flex-shrink: 0;
   &:hover {
     background-color: var(--color-hover);
   }
