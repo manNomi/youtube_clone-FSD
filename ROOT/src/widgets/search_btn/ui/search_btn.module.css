@@ -11,6 +11,6 @@
   cursor: pointer;
 }
 .img {
-  width: 24px;
-  height: 24px;
+  width: var(--logo-size-small);
+  height: var(--logo-size-small);
 }
