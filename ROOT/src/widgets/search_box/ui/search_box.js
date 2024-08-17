@@ -9,9 +9,10 @@ export const makeSearchBox = (srcURL) => {
   const searchBox = document.createElement("div");
   searchBox.className = css.root;
 
-  const searchLogo = document.createElement("img");
-  searchLogo.className = css.img;
-  searchLogo.src = srcURL;
+  const searchLogo = document.createElement("div");
+  searchLogo.classList.add(css.img);
+  searchLogo.style.backgroundImage = `url(${srcURL})`;
+  searchLogo.id = "search_inner_logo";
 
   const searchInput = makeSearchInput();
   searchInput.addEventListener("focus", () => inputFocus(event, css));

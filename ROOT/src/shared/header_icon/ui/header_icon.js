@@ -7,7 +7,7 @@ export const makeHeaderIcon = (src) => {
   const newBox = document.createElement("div");
   newBox.className = css.box;
   const newIcon = makeIconImg(src);
-  newIcon.className = css.root;
+  newIcon.classList.add(css.root);
   newBox.appendChild(newIcon);
   newContainer.appendChild(newBox);
   return newContainer;
